@@ -1,0 +1,17 @@
+{
+  "name": "chat-app-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:client": "npm install --prefix client",
+    "install:server": "npm install --prefix server",
+    "install:all": "npm run install:server && npm run install:client",
+    "dev:server": "npm start --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently --kill-others \"npm run dev:server\" \"npm run dev:client\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
